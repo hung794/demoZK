@@ -1,0 +1,61 @@
+<zk>
+    <window id="win" use="org.example.WindowController">
+        <div style="margin-bottom: 10px" align="center">
+            <textbox id="nameSearch" placeholder="Name"/>
+            <textbox id="addressSearch" placeholder="Address"/>
+            <textbox id="startSalarySearch" placeholder="Start Salary"/>
+            <textbox id="endSalarySearch" placeholder="End Salary"/>
+            <button id="searchButton"
+                    onClick="win.searchEmployee(nameSearch.getValue(), addressSearch.getValue(), startSalarySearch.getValue(), endSalarySearch.getValue())"
+                    zclass="z-button search-button">Search
+            </button>
+        </div>
+        <listbox id="lstEmployee" emptyMessage="No Items Match Your Search!" onCreate="win.viewList()">
+            <listhead>
+                <listheader label="Id" align="center"/>
+                <listheader label="Name" align="center"/>
+                <listheader label="Address" align="center"/>
+                <listheader label="Salary" align="center"/>
+                <listheader label="Action" align="center"/>
+            </listhead>
+        </listbox>
+        <div style="margin-top: 10px" align="center">
+            <button label="Create Employee" onClick="win.openCreateDialog()"/>
+        </div>
+    </window>
+
+
+
+    <style>
+        .z-button {
+            font-family: "Helvetica Neue", Helvetica, Arial,sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+            min-height: 24px;
+            border: 2px solid transparent;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -o-border-radius: 4px;
+            -ms-border-radius: 4px;
+            border-radius: 4px;
+            padding: 6px 16px;
+            line-height: normal;
+            cursor: pointer;
+            color: white;
+            white-space: nowrap;
+        }
+
+        .delete-button {
+            background-color: red;
+        }
+
+        .update-button {
+            background-color: #0093F9;
+        }
+
+        .search-button {
+            background-color: black;
+        }
+    </style>
+</zk>

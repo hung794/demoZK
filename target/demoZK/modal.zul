@@ -1,0 +1,50 @@
+<zk>
+    <window id="modal"
+            width="100%" use="org.example.WindowController" >
+        <div align="center">
+            <grid height="70" width="70%" style="align:center">
+                <rows id="formRows">
+                </rows>
+            </grid>
+            <div style="margin-top: 10px">
+                <button id="save" label="Save"
+                        onClick="win.saveEmployee(id.getValue(),name.getValue(),address.getValue(),salary.getValue())"/>
+                <button id="close" label="Close" zclass="delete-button z-button"
+                        onClick="win.closeDialog()"/>
+            </div>
+        </div>
+    </window>
+
+    <style>
+        .z-button {
+            font-family: "Helvetica Neue", Helvetica, Arial,sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+            min-height: 24px;
+            border: 2px solid transparent;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -o-border-radius: 4px;
+            -ms-border-radius: 4px;
+            border-radius: 4px;
+            padding: 6px 16px;
+            line-height: normal;
+            cursor: pointer;
+            color: white;
+            white-space: nowrap;
+        }
+
+        .delete-button {
+            background-color: red;
+        }
+
+        .update-button {
+            background-color: #0093F9;
+        }
+
+        .search-button {
+            background-color: black;
+        }
+    </style>
+</zk>
